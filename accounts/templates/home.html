@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health App</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #007bff;
+            overflow: hidden;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h1 {
+            color: #007bff;
+            font-size: 36px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .hero a {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 18px;
+        }
+
+        .hero a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Sections */
+        .section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #007bff;
+        }
+
+        .section p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">Health App</div>
+        <div>
+            <a href="{% url 'signup' %}">Account</a>
+            <a href="#">Health Tracking</a>
+            <a href="#">Professional Advice</a>
+            <a href="#">Weather Advice</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Welcome to the Health App</h1>
+        <p>Your ultimate tool for tracking health, getting professional advice, and staying updated with weather health alerts.</p>
+        <a href="{% url 'signup' %}">Get Started</a>
+    </div>
+
+    <!-- Health Tracking Section -->
+    <div class="section">
+        <h2>Track Your Health</h2>
+        <p>Monitor your physical and mental health with personalised tracking features. Stay on top of your wellness journey.</p>
+    </div>
+
+    <!-- Professional Advice Section -->
+    <div class="section" style="background-color: #e6f2ff;">
+        <h2>Get Expert Advice</h2>
+        <p>Receive professional guidance from health experts to improve your lifestyle and well-being.</p>
+    </div>
+
+    <!-- Weather Advice Section -->
+    <div class="section">
+        <h2>Weather & Health</h2>
+        <p>Stay safe with weather-related health advice. Be prepared for seasonal changes and extreme conditions.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2025 Health App | All Rights Reserved
+    </div>
+
+</body>
+</html>
