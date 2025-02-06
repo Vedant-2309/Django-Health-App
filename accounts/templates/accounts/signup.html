@@ -54,6 +54,11 @@
             {{ form.as_p }}
             <button type="submit">Sign Up</button>
         </form>
+        <p>Already have an account?</p>
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Login</button>    
+        </form>
     </div>
 </body>
 </html>
