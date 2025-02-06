@@ -50,7 +50,7 @@
 <body>
     <div class="form-container">
         <h2>Log In</h2>
-        <form method="POST">
+        <form action="{% url 'home' %}" method="POST">
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit">Log In</button>
