@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health App</title>
+    <title>Health Tracking</title>
     <style>
         /* Global Styles */
         body {
@@ -60,33 +60,30 @@
             margin: 20px 0;
         }
 
-        .hero a {
-            background-color: #007bff;
-            color: white;
-            padding: 12px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            font-size: 18px;
-        }
-
-        .hero a:hover {
-            background-color: #0056b3;
-        }
-
-        /* Sections */
-        .section {
+        /* Features Section */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             padding: 50px;
+        }
+
+        .feature {
+            width: 300px;
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
-        .section h2 {
+        .feature h2 {
             color: #007bff;
+            font-size: 22px;
         }
 
-        .section p {
-            max-width: 600px;
-            margin: 0 auto;
+        .feature p {
             font-size: 16px;
         }
 
@@ -106,7 +103,7 @@
     <div class="navbar">
         <div class="logo">Health App</div>
         <div>
-            <a href="{% url 'signup' %}">Account</a>
+            <a href="{% url 'home' %}">Home</a>
             <a href="{% url 'health_tracking' %}">Health Tracking</a>
             <a href="#">Professional Advice</a>
             <a href="#">Weather Advice</a>
@@ -115,27 +112,28 @@
 
     <!-- Hero Section -->
     <div class="hero">
-        <h1>Welcome to the Health App</h1>
-        <p>Your ultimate tool for tracking health, getting professional advice, and staying updated with weather health alerts.</p>
-        <a href="{% url 'signup' %}">Get Started</a>
+        <h1>Track Your Health</h1>
+        <p>Stay on top of your well-being with personalized health tracking.</p>
     </div>
 
-    <!-- Health Tracking Section -->
-    <div class="section">
-        <h2>Track Your Health</h2>
-        <p>Monitor your physical and mental health with personalised tracking features. Stay on top of your wellness journey.</p>
-    </div>
-
-    <!-- Professional Advice Section -->
-    <div class="section" style="background-color: #e6f2ff;">
-        <h2>Get Expert Advice</h2>
-        <p>Receive professional guidance from health experts to improve your lifestyle and well-being.</p>
-    </div>
-
-    <!-- Weather Advice Section -->
-    <div class="section">
-        <h2>Weather & Health</h2>
-        <p>Stay safe with weather-related health advice. Be prepared for seasonal changes and extreme conditions.</p>
+    <!-- Features Section -->
+    <div class="features">
+        <div class="feature">
+            <h2>Step Tracking</h2>
+            <p>Monitor your daily steps and stay active to improve fitness.</p>
+        </div>
+        <div class="feature">
+            <h2>Heart Rate Monitoring</h2>
+            <p>Keep track of your heart rate for better cardiovascular health.</p>
+        </div>
+        <div class="feature">
+            <h2>Sleep Tracking</h2>
+            <p>Analyze your sleep patterns to improve rest and recovery.</p>
+        </div>
+        <div class="feature">
+            <h2>Mental Health Tracking</h2>
+            <p>Track your mood and stress levels to maintain emotional well-being.</p>
+        </div>
     </div>
 
     <!-- Footer -->

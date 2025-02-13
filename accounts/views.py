@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from .forms import SignUpForm, LoginForm
+from django.views.generic import TemplateView
 
 def signup_view(request):
     if request.method == 'POST':
@@ -30,3 +31,6 @@ def login_view(request):
 
 def home_view(request):
     return render(request, 'home.html')
+
+def health_tracking_view(request):
+    return render(request, 'health_tracking.html')
