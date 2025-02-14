@@ -37,3 +37,4 @@ def health_tracking_view(request):
 
 def professional_advice_view(request):
     return render(request, 'professional_advice.html')
+
