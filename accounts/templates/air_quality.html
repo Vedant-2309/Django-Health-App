@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Air Quality Information</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .good { background-color: #9CFF9C; }
+        .moderate { background-color: #FFFF66; }
+        .unhealthy-sensitive { background-color: #FFB266; }
+        .unhealthy { background-color: #FF6666; }
+        .very-unhealthy { background-color: #CC66CC; }
+        .hazardous { background-color: #660000; color: #fff; }
+    </style>
+</head>
+<body>
+    <h1>Air Quality Information</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>City</th>
+                <th>AQI</th>
+                <th>Dominant Pollutant</th>
+                <th>Health Advice</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in air_quality_data %}
+                <tr class="{% if data.aqi <= 50 %}good{% elif data.aqi <= 100 %}moderate{% elif data.aqi <= 150 %}unhealthy-sensitive{% elif data.aqi <= 200 %}unhealthy{% elif data.aqi <= 300 %}very-unhealthy{% else %}hazardous{% endif %}">
+                    <td>{{ data.city }}</td>
+                    <td>{{ data.aqi }}</td>
+                    <td>{{ data.dominant_pollutant }}</td>
+                    <td>{{ data.advice }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
